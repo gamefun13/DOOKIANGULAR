@@ -1,0 +1,93 @@
+<!-- Hero Section -->
+<section id="hero-services" class="hero-services">
+    <div class="hero-container">
+      <div class="hero-image">
+        <img src="assets/images/serviciosdooki.jpg" alt="Servicios Dooki" />
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <h1>Servicios Dooki</h1>
+        <p>En Dooki, ofrecemos una atención integral y de alta calidad para el cuidado de las mascotas.</p>
+        <a routerLink="/login" class="cta-button">Agenda Ya</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Servicios Section con tarjetas flip 3D -->
+  <section id="services" class="services">
+    <h2 class="services-title">Nuestros Servicios</h2>
+    <div class="services-grid">
+      <div class="icon-card" *ngFor="let servicio of servicios">
+        <div class="card-inner">
+          <div class="card-front" [ngStyle]="{'background-image': 'url(' + servicio.imagen + ')', 'background-size': 'cover', 'background-position': 'center'}">
+            <span>{{ servicio.nombre }}</span>
+          </div>
+          <div class="card-back">
+            <p>{{ servicio.descripcion }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Services Icons Section -->
+  <section id="service-icons" class="service-icons">
+    <h2>Para la felicidad tuya y de tus mascotas</h2>
+    <div class="icons-grid">
+      <div class="icon-card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="assets/images/img-shopping-bag-Servicios.png" alt="Servicios" />
+            <span>Servicios</span>
+          </div>
+          <div class="card-back">
+            <p>Descubre nuestros amplios servicios para cuidar a tus mascotas.</p>
+            <a routerLink="/services" class="card-btn">Ver más</a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="icon-card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="assets/images/imgEspecialidades.png" alt="Especialidades" />
+            <span>Especialidades</span>
+          </div>
+          <div class="card-back">
+            <p>Conoce nuestras especialidades en salud animal.</p>
+            <a routerLink="/specialties" class="card-btn">Ver más</a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="icon-card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="assets/images/img-exotic-pet.png" alt="Animales Exóticos" />
+            <span>Animales Exóticos</span>
+          </div>
+          <div class="card-back">
+            <p>Atendemos también a animales exóticos.</p>
+            <a routerLink="/exotic" class="card-btn">Ver más</a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="icon-card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="assets/images/pet-house-Nosotros.png" alt="Nosotros" />
+            <span>Nosotros</span>
+          </div>
+          <div class="card-back">
+            <p>Conoce nuestro equipo y nuestra historia.</p>
+            <a routerLink="/whoweare" class="card-btn">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <a routerLink="/login" class="cta-button">Reserva con nosotros</a>
+  </section>
+  
+ 

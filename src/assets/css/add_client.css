@@ -1,0 +1,172 @@
+/* Definición de colores globales */
+:root {
+  --color-primary: #44D2F5;
+  --color-secondary: #95E6E9;
+  --color-accent: #FC7042;
+  --color-background: #f8fcfc;
+  --color-text: #00191a;
+  --color-text-light: rgba(0, 25, 26, 0.8);
+}
+
+/* Transiciones para animar texto e imagen */
+.preview-container h2,
+.preview-container p,
+.preview-img {
+  transition: all 0.5s ease;
+}
+
+body {
+  background-color: var(--color-background);
+  font-family: "Arial", sans-serif;
+  color: var(--color-text);
+}
+
+/* Sección del formulario */
+.form-container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px; /* Ajusta el ancho del formulario */
+  text-align: center;
+  border-top: 8px solid var(--color-primary);
+}
+
+/* Títulos y etiquetas */
+h2 {
+  color: var(--color-primary);
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.form-label {
+  color: var(--color-text);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Inputs */
+.form-control {
+  border: 2px solid var(--color-secondary);
+  border-radius: 8px;
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+  font-size: 1.2rem;
+  outline: none;
+}
+
+.form-control:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 8px rgba(68, 210, 245, 0.5);
+}
+
+/* Botones */
+.btn-submit,
+.btn-cancel {
+  display: block;
+  width: 100%;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 10px;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
+}
+
+.btn-submit {
+  background-color: #44d2f5;;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+.btn-submit:hover {
+  background-color: #40c0e0;
+  transform: scale(1.02);
+}
+
+.btn-cancel {
+  background-color: var(--color-accent);
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-cancel:hover {
+  background-color: #e85b2c;
+  transform: scale(1.02);
+}
+
+/* Sección de vista previa */
+.preview-container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 500px; /* Ajusta el ancho de la tarjeta de vista previa */
+  border: 3px solid transparent; /* Borde por defecto transparente */
+}
+
+/* Imagen circular más grande */
+.preview-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+/* Título para el nombre del cliente */
+.preview-container h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+/* Detalles (atributos) con fondo diferenciado y bordes redondeados */
+.preview-details {
+  background-color: #f0f9ff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  font-size: 1.4rem;
+}
+
+.preview-details p {
+  font-size: 1.3rem;
+  margin: 10px 0;
+  color: #003f48;
+  font-weight: 500;
+}
+
+/* Animación de fade para actualizaciones */
+.animate-update {
+  animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0.5; }
+  to { opacity: 1; }
+}
+
+/* Borde iluminado que se mantiene una vez activado */
+.highlight-border {
+  border-color: #44d2f5 !important;
+  box-shadow: 0 0 10px rgba(68, 210, 245, 0.5);
+}

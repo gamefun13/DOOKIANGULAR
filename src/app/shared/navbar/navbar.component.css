@@ -1,0 +1,144 @@
+/* Estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :host {
+    display: block;
+    width: 100%;
+  }
+  
+  body {
+    font-family: 'Itim', cursive;
+    color: #00191a;
+  }
+  
+  /* Línea superior de urgencias */
+  #barrita-urgencias {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background-color: #44d3f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1010;
+    font-family: 'Itim', cursive;
+  }
+  
+  #barrita-urgencias a {
+    color: #00191a;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  #barrita-urgencias a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Navbar */
+  .navbar {
+    position: fixed;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    background: white;
+    z-index: 1000;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: 'Itim', cursive;
+  }
+  
+  /* Logo y video */
+  .logo-with-name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo-with-name:hover {
+    transform: scale(1.05);
+  }
+  
+  .logo-img {
+    width: 115px;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  .name-img {
+    width: 155px;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  #logo-video {
+    display: block;
+    width: 155px;
+    height: auto;
+  }
+  
+  /* Navegación */
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    font-size: 18px;
+  }
+  
+  .nav-button {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: #00191f;
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .nav-button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: #44D2F5;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .nav-button:hover {
+    transform: scale(1.03);
+  }
+  
+  .nav-button:hover::after {
+    width: 100%;
+  }
+  
+  /* Animación */
+  @keyframes focus-in-expand-fwd {
+    0% {
+      letter-spacing: -0.5em;
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      letter-spacing: normal;
+      filter: blur(0);
+      opacity: 1;
+    }
+  }
+  
+  .focus-in-expand-fwd {
+    animation: focus-in-expand-fwd 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+  

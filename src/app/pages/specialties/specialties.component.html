@@ -1,0 +1,142 @@
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-container">
+      <img src="https://i.pinimg.com/736x/f3/0d/81/f30d81348e251d02cfb6e5abded64874.jpg" alt="Especialidades" class="hero-image">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Especialidades</h1>
+        <p>Tenemos diferentes especialidades para brindar el mejor trato posible a tu mascota</p>
+        <a routerLink="/login" class="cta-button">Agenda tu cita</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Título "Nuestras Especialidades" -->
+  <header class="title">
+    <h2>Nuestras Especialidades</h2>
+  </header>
+  
+  <!-- Sección de Especialidades -->
+  <section class="specialties-container">
+  
+    <!-- Dermatología -->
+    <div class="specialty-card blue">
+      <div class="image-container">
+        <img src="https://i.pinimg.com/736x/71/eb/e5/71ebe5da2f80925391a671eeea12a9d0.jpg" alt="Dermatología">
+      </div>
+      <div class="text-container">
+        <h3>Dermatología</h3>
+        <p>Cuidamos la piel de tu mascota, diagnosticando y tratando alergias, infecciones y otras afecciones dermatológicas para su bienestar.</p>
+      </div>
+    </div>
+  
+    <!-- Cardiología -->
+    <div class="specialty-card green reverse">
+      <div class="image-container">
+        <img src="https://i.pinimg.com/736x/3b/1d/ce/3b1dceeac5d19432c9af71e01d20e061.jpg" alt="Cardiología">
+      </div>
+      <div class="text-container">
+        <h3>Cardiología</h3>
+        <p>Detectamos y tratamos enfermedades del corazón en mascotas, asegurando una vida más saludable y activa para tu mejor amigo.</p>
+      </div>
+    </div>
+  
+    <!-- Nutrición -->
+    <div class="specialty-card orange">
+      <div class="image-container">
+        <img src="https://i.pinimg.com/736x/9b/7a/02/9b7a02b54ffc6be18399f33f8a712f8e.jpg" alt="Nutrición">
+      </div>
+      <div class="text-container">
+        <h3>Nutrición</h3>
+        <p>Diseñamos planes nutricionales personalizados para que tu mascota tenga una alimentación balanceada y acorde a sus necesidades.</p>
+      </div>
+    </div>
+  
+    <!-- Fisioterapia -->
+    <div class="specialty-card blue reverse">
+      <div class="image-container">
+        <img src="https://i.pinimg.com/736x/2f/87/bb/2f87bb1147b5ff449af8dcd1d3b3a3b8.jpg" alt="Fisioterapia">
+      </div>
+      <div class="text-container">
+        <h3>Fisioterapia</h3>
+        <p>Recuperamos la movilidad y calidad de vida de tu mascota con terapias especializadas para rehabilitación y bienestar físico.</p>
+      </div>
+    </div>
+  
+    <!-- Odontología -->
+    <div class="specialty-card green">
+      <div class="image-container">
+        <img src="https://i.pinimg.com/736x/12/23/da/1223dad3ade4023e09e7eb1fe289b60f.jpg" alt="Odontología">
+      </div>
+      <div class="text-container">
+        <h3>Odontología</h3>
+        <p>La salud bucal es clave para el bienestar de tu mascota. Prevenimos y tratamos enfermedades dentales para una sonrisa saludable.</p>
+      </div>
+    </div>
+  
+    <!-- Ortopedia -->
+    <div class="specialty-card orange reverse">
+      <div class="image-container">
+        <img src="https://i.pinimg.com/736x/b2/11/6a/b2116a4f612c1f1b1ff508f1f519d9be.jpg" alt="Ortopedia">
+      </div>
+      <div class="text-container">
+        <h3>Ortopedia</h3>
+        <p>Diagnóstico y tratamiento de problemas óseos y articulares, ayudando a tu mascota a moverse sin dolor y con mayor comodidad.</p>
+      </div>
+    </div>
+  
+    <!-- Oncología -->
+    <div class="specialty-card blue">
+      <div class="image-container">
+        <img src="https://i.pinimg.com/736x/64/61/29/646129ac0a35619c6c53ac5ec601fe38.jpg" alt="Oncología">
+      </div>
+      <div class="text-container">
+        <h3>Oncología</h3>
+        <p>Detectamos y tratamos tumores en mascotas con un enfoque integral, brindando opciones para mejorar su calidad de vida y bienestar.</p>
+      </div>
+    </div>
+  
+    <!-- Neurología -->
+    <div class="specialty-card green reverse">
+      <div class="image-container">
+        <img src="https://i.pinimg.com/474x/d4/1c/35/d41c354676919445dd8200420b3ed340.jpg" alt="Neurología">
+      </div>
+      <div class="text-container">
+        <h3>Neurología</h3>
+        <p>Evaluamos y tratamos trastornos neurológicos en mascotas, mejorando su calidad de vida con diagnóstico preciso y atención experta.</p>
+      </div>
+    </div>
+  
+    <!-- Oftalmología -->
+    <div class="specialty-card orange">
+      <div class="image-container">
+        <img src="https://i.pinimg.com/736x/5c/4d/7d/5c4d7dcf8df89249bc1b6e0ac40fe585.jpg" alt="Oftalmología">
+      </div>
+      <div class="text-container">
+        <h3>Oftalmología</h3>
+        <p>Protegemos la visión de tu mascota, diagnosticando y tratando enfermedades oculares para que siga explorando el mundo con claridad.</p>
+      </div>
+    </div>
+  
+  </section>
+  
+  <!-- Services Icons -->
+  <section id="service-icons" class="service-icons">
+    <h2>Para la felicidad tuya y de tus mascotas</h2>
+    <div class="icons-grid">
+      <div class="icon-card" *ngFor="let icon of icons">
+        <div class="card-inner">
+          <div class="card-front">
+            <img [src]="icon.image" [alt]="icon.title">
+            <span>{{ icon.title }}</span>
+          </div>
+          <div class="card-back">
+            <p>{{ icon.description }}</p>
+            <a [routerLink]="icon.link" class="card-btn">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a routerLink="/login" class="cta-button">Reserva con nosotros</a>
+  </section>
+  

@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+        /* Color Variables */
+        :root {
+            --color-primary: #44D2F5;
+            --color-secondary: #95E6E9;
+            --color-accent: #FC7042;
+            --color-background: #f8fcfc;
+            --color-text: #00191a;
+            --color-text-light: rgba(0, 25, 26, 0.8);
+            --shadow: 0 14px 28px rgba(0, 25, 26, 0.15), 0 10px 10px rgba(0, 25, 26, 0.12);
+        }
+
+        nav{
+            padding-bottom: 50px;
+        }
+
+        /* Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: var(--color-background);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: 'Itim', sans-serif;
+            font-size: larger;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            color: var(--color-text);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0px 0px 50px 0px;
+            /* margin-top: 80px; Adjust this value based on the height of your navbar
+            Toca ponerle el navbar */
+        }
+
+        /* Header Styles */
+        .page-header {
+            margin-bottom: 0.5rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+            margin-top: 15px;
+        }
+
+        .page-subtitle {
+            color: var(--color-text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .logo-container {
+            margin: 20px 0;
+        }
+
+        #logo {
+            display: block;
+            width: 52px;
+            height: 52px;
+            margin: 0 auto;
+            background: url("https://cdn-icons-png.flaticon.com/512/7168/7168657.png") no-repeat center;
+            background-size: cover;
+            text-indent: -9999px;
+        }
+
+        /* Actions Container */
+        .actions-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .search-input {
+            background-color: white;
+            border: 1px solid var(--color-secondary);
+            border-radius: 20px;
+            padding: 10px 15px;
+            width: 250px;
+            color: var(--color-text);
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .search-input:focus {
+            outline: none;
+            box-shadow: 0 0 5px rgba(68, 210, 245, 0.5);
+        }
+
+        .add-button {
+            border-radius: 20px;
+            border: 1px solid var(--color-accent);
+            background-color: var(--color-accent);
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 10px 20px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: transform 80ms ease-in;
+            cursor: pointer;
+        }
+
+        .add-button:active {
+            transform: scale(0.95);
+        }
+
+        .add-button:focus {
+            outline: none;
+        }
+
+        /* Table Styles */
+        .pets-table {
+            width: 100%;
+            border-collapse: separate;
+            display: flex;
+            flex-direction: column;
+            border-spacing: 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .pets-table thead {
+            display: flex;
+            width: 100%;
+        }
+
+        .pets-table tbody {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .pets-table tr {
+            display: flex;
+            width: 100%;
+        }
+
+        .pets-table tbody tr{
+            border-bottom: 1px solid rgba(0, 25, 26, 0.1);
+            display: flex;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .pets-table th, .pets-table td {
+            flex: 1;
+            padding: 15px;
+            text-align:center;
+            /* border-bottom: 1px solid rgba(0, 25, 26, 0.1); */
+            color: var(--color-text);
+        }
+
+        .pets-table th {
+            background: var(--color-primary); /* Change to simple blue color */
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+        }
+
+        .pets-table tbody td {
+            padding: 30px 15px 30px 15px;
+            height: fit-content;
+        }
+
+        .pets-table tbody td:first-child {
+            padding: 20px 15px 20px 15px;
+        }
+
+        .pets-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .pets-table tbody tr:hover {
+            background-color: rgba(149, 230, 233, 0.1);
+        }
+
+        /* Pet Image */
+        .pet-image {
+            width: 60px;
+            height: 63px;
+            border-radius: 50%;
+            object-fit: cover;
+            vertical-align: middle;
+            border: 2px solid var(--color-secondary);
+        }
+
+        /* Pet Name */
+        .pet-name {
+            color: var(--color-accent);
+            font-weight: 600;
+        }
+
+        /* Age Badge */
+        .age-badge {
+            background-color: var(--color-secondary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            display: inline-block;
+            color: white;
+        }
+
+        /* Action Buttons */
+        .actions-cell {
+            white-space: nowrap;
+        }
+
+        .edit-button, .delete-button {
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 8px 15px;
+            margin-right: 5px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: transform 80ms ease-in;
+            cursor: pointer;
+        }
+
+        .edit-button {
+            border: 1px solid var(--color-primary);
+            background-color: var(--color-primary);
+            color: white;
+        }
+
+        .delete-button {
+            border: 1px solid var(--color-accent);
+            background-color: transparent;
+            color: var(--color-accent);
+        }
+
+        .edit-button:active, .delete-button:active {
+            transform: scale(0.95);
+        }
+
+        .edit-button:focus, .delete-button:focus {
+            outline: none;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            
+            width: 100%;
+            background-color: var(--color-background);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        .menu-items {
+            display: flex;
+            list-style: none;
+        }
+
+        .menu-items li {
+            margin: 0 1rem;
+        }
+
+        .menu-items a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .actions-container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .search-input {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+            
+            .add-button {
+                width: 100%;
+            }
+            
+            .pets-table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+            
+            .pets-table th, .pets-table td {
+                white-space: nowrap;
+                text-align: center;
+            }
+            
+            .edit-button, .delete-button {
+                padding: 6px 10px;
+                font-size: 10px;
+            }
+        }

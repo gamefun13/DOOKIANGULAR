@@ -1,0 +1,203 @@
+
+:root {
+    --color-primary: #44d3f7;
+    --color-primary-dark: #0888a8;
+    --color-secondary: #95e6e9f9;
+    --color-accent: #FC7042;
+    --color-background: #f8fcfc;
+    --color-background-blueish: #cdfcfc;
+    --color-text: #00191a;
+    --color-text-light: rgba(0, 25, 26, 0.8);
+    --shadow: 0 14px 28px rgba(0, 25, 26, 0.15), 0 10px 10px rgba(0, 25, 26, 0.12);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-wrap: wrap;
+    height: 410px;
+    width: auto;
+    position: relative; 
+    padding-bottom: 20px;
+}
+
+.section-cards{
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: var(--color-background-blueish);
+}
+
+.section-cards h1{
+    color: black;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+    .card {
+        display: flex;
+        height: 330px;
+        width: 210px;
+        background-color: var(--color-accent);
+        border-radius: 10px;
+        box-shadow: 1px 0 1rem #373636;
+        transition: 0.4s ease-out;
+        position: relative;
+        left: 0px;
+    }
+
+    .card:not(:first-child) {
+        margin-left: -120px;
+    }
+
+    .card:hover {
+        transform: translateY(-55px);   
+        transition: 0.5s ease-out;
+    }
+
+    .card:hover ~ .card {
+        position: relative;
+        left: 120px;
+        transition: 0.4s ease-out;
+    }
+
+  
+  .title {
+    color: white;
+    font-weight: 300;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+  }
+  
+  .bar {
+    position: absolute;
+    top: 52px;
+    left: 20px;
+    height: 5px;
+    width: 150px;
+  }
+  
+  .emptybar {
+    background-color: #232424;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .filledbar {
+    position: absolute;
+    top: 0px;
+    z-index: 3;
+    width: 0px;
+    height: 100%;
+    background: rgb(43, 43, 43);
+    background: linear-gradient(90deg, rgb(227, 155, 0) 0%, rgb(234, 226, 114) 65%, rgb(241, 249, 9) 100%);
+    transition: 0.6s ease-out;
+  }
+  
+  .card:hover .filledbar {
+    width: 120px;
+    transition: 0.4s ease-out;
+  }
+  
+  .circle {
+    position: absolute;
+    top: 70px;
+    left: calc(30% - 60px);
+}
+
+/* Circle Stroke Animation */
+.stroke {
+    stroke: var(--color-accent);
+    stroke-width: 3.2px;
+    stroke-dasharray: 360;
+    stroke-dashoffset: 360;
+    transition: 0.6s ease-out;
+}
+
+svg {
+    fill: none; /* No background, only the stroke */
+    stroke-width: 2px;
+}
+
+.card:hover .stroke {
+    stroke-dashoffset: 100;
+    transition: 0.6s ease-out;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    gap: 20px;
+}
+
+.description {
+    flex: 1;
+    max-width: 40%;
+    padding: 20px;
+    color: white;
+}
+
+.description h2 {
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.description p {
+    color: black;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.cards-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .description, .cards-container {
+        max-width: 100%;
+        text-align: center;
+    }
+}
+
+
+.specialty, .experience, .success {
+    font-size: 0.9rem;
+    color: #ffffff;
+    text-align: center;
+    position: absolute;
+    left: 20px;
+    width: 170px;
+}
+
+.specialty {
+    top: 190px; /* Justo debajo de la imagen */
+}
+
+.experience {
+    top: 215px; /* Un poco más abajo */
+}
+
+.success {
+    top: 240px; /* En la parte inferior */
+}
+
+
+

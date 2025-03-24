@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+body {
+  background: #eaeef6;
+  font-family: "Itim";
+}
+
+.navbar {
+  position: fixed;
+  right: 0;
+  top: 1rem;
+  left: 1rem;
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem 0;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.03);
+  align-items: flex-end;
+  height: auto;
+  width: 5.5rem;
+  filter: url("#goo");
+}
+.navbar__menu {
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.navbar__item {
+  position: relative;
+  height: 3.5rem;
+  width: 100%;
+}
+.navbar__item:before {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: calc(100% - 2rem);
+  height: 2.8rem;
+  background: #406ff3;
+  border-radius: 17.5px;
+  transform: translate(-50%, -50%);
+  transition: opacity 250ms ease;
+}
+.navbar__item:hover:before {
+  opacity: 1;
+  animation: gooeyEffect-1 250ms cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+.navbar__item:hover .navbar__link {
+  color: #fff;
+}
+.navbar__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
+  color: #6a778e;
+  transition: 250ms ease all;
+  padding: 0 1.5rem;
+  text-decoration: none;
+  z-index: 2;
+}
+.navbar__link i {
+  font-size: 1.5rem;
+  margin-right: 0.75rem;
+}
+.navbar__link span {
+  position: absolute;
+  left: calc(70% - 0.5rem);
+  transform: translateX(0);
+  opacity: 0;
+  pointer-events: none;
+  color: #406ff3;
+  background: #fff;
+  padding: 0.5rem;
+  transition: 250ms ease all;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+  font-size: 0.875rem;
+}
+.navbar__link:hover span {
+  opacity: 1;
+  transform: translateX(0.25rem);
+}
+
+@keyframes gooeyEffect-1 {
+  0% {
+    transform: translate(-50%, -50%) scale(1, 1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.5, 0.85);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1, 1);
+  }
+}
+@keyframes gooeyEffect-2 {
+  0% {
+    transform: translate(-50%, -50%) scale(1, 1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.5, 0.85);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1, 1);
+  }
+}
+@keyframes gooeyEffect-3 {
+  0% {
+    transform: translate(-50%, -50%) scale(1, 1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.5, 0.85);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1, 1);
+  }
+}
+@keyframes gooeyEffect-4 {
+  0% {
+    transform: translate(-50%, -50%) scale(1, 1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.5, 0.85);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1, 1);
+  }
+}
+@keyframes gooeyEffect-5 {
+  0% {
+    transform: translate(-50%, -50%) scale(1, 1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.5, 0.85);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1, 1);
+  }
+}
+@keyframes gooeyEffect-6 {
+  0% {
+    transform: translate(-50%, -50%) scale(1, 1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.5, 0.85);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1, 1);
+  }
+}
+@keyframes gooeyEffect-7 {
+  0% {
+    transform: translate(-50%, -50%) scale(1, 1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.5, 0.85);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1, 1);
+  }
+}
+@keyframes gooeyEffect-8 {
+  0% {
+    transform: translate(-50%, -50%) scale(1, 1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.5, 0.85);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1, 1);
+  }
+}
+@keyframes gooeyEffect-9 {
+  0% {
+    transform: translate(-50%, -50%) scale(1, 1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.5, 0.85);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1, 1);
+  }
+}
+@keyframes gooeyEffect-10 {
+  0% {
+    transform: translate(-50%, -50%) scale(1, 1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.5, 0.85);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1, 1);
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

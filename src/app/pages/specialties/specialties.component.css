@@ -1,0 +1,245 @@
+/* ======= HERO SECTION ======= */
+.hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    margin-top: 70px; /* Ajusta si tu navbar mide diferente */
+}
+  
+  .hero-container {
+    position: relative;
+    width: 100%;
+    max-width: none;
+    border-radius: 0; /* eliminamos el redondeado */
+    overflow: hidden;
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+    filter: brightness(60%); /* efecto difuminado */
+  }
+  
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+  }
+  
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 2;
+    padding: 0 2rem;
+  }
+  
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  /* ======= TÍTULO "NUESTRAS ESPECIALIDADES" ======= */
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+    text-align: center;
+  }
+  
+  .title h2 {
+    background-color: #95E6E9;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  /* ======= TARJETAS DE ESPECIALIDADES ======= */
+  .specialties-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .specialty-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 700px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+  }
+  
+  .specialty-card.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .specialty-card.reverse.verde {
+    flex-direction: row-reverse;
+    background-color: rgba(77, 241, 187, 0.4);
+  }
+  
+  .blue {
+    background-color: rgba(68, 210, 245, 0.40);
+  }
+  
+  .orange {
+    background-color: rgba(252, 112, 66, 0.655);
+  }
+  
+  .green {
+    background-color: rgba(100, 248, 199, 0.655);
+  }
+  
+  .image-container {
+    width: 40%;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .text-container {
+    width: 55%;
+    padding: 10px 20px;
+    text-align: left;
+  }
+  
+  /* ======= ICONOS DE SERVICIO ======= */
+  .service-icons {
+    padding: 1.5rem 5%;
+    text-align: center;
+  }
+  
+  .icons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin: 3rem 0;
+  }
+  
+  .icon-card {
+    perspective: 1000px;
+    height: 250px;
+    border-radius: 20px;
+  }
+  
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    border-radius: 20px;
+  }
+  
+  .icon-card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .card-front {
+    background-color: #e6f4f7;
+    color: #00191a;
+  }
+  
+  .card-front img {
+    max-width: 100%;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+  
+  .card-front span {
+    font-size: 22px;
+  }
+  
+  .card-back {
+    background-color: #FC7042;
+    color: white;
+    transform: rotateY(180deg);
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  .card-btn {
+    background-color: white;
+    color: #FC7042;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none; /* 👈 aquí es clave */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card-btn:hover {
+    transform: scale(1.1);
+    background-color: #f0f0f0;
+  }
+  
+  
+  /* ======= BOTÓN GENERAL ======= */
+  .cta-button {
+    padding: 0.9rem 1rem;
+    background: #FC7042;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    margin: 50px auto 20px auto;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+    text-decoration: none; 
+  }
+  
+  .cta-button:hover {
+    background: #FC7042;
+    transform: scale(1.1);
+  }

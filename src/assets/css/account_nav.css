@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+:root {
+    --color-primary: #44D2F5;
+    --color-secondary: #95E6E9;
+    --color-accent: #FC7042;
+    --color-background: #f8fcfc;
+    --color-text: #00191a;
+    --color-text-light: rgba(0, 25, 26, 0.8);
+    --nav-height: 62px;
+}
+
+* {
+    margin: 0.1;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Itim', sans-serif;
+    background: var(--color-background);
+}
+
+/* Navbar Styles */
+.navbar {
+    background: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo {
+    margin-left: auto;
+    padding-right: 20px;
+}
+
+.logo h1 {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Hamburger Menu */
+.checkbox {
+    display: none;
+}
+
+.hamburger-lines {
+    display: none;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.hamburger-lines .line {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: var(--color-text);
+    position: absolute;
+    transition: transform 0.3s ease-in-out;
+}
+
+.line1 { top: 0; }
+.line2 { top: 50%; transform: translateY(-50%); }
+.line3 { bottom: 0; }
+
+/* Menu Items */
+.menu-items {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu-items li {
+    margin: 0;
+}
+
+.menu-items a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.menu-items a:hover {
+    color: var(--color-primary);
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+    .checkbox {
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 20px;
+        left: 20px;
+        opacity: 0;
+        cursor: pointer;
+        z-index: 3;
+    }
+
+    .hamburger-lines {
+        display: block;
+        position: absolute;
+        left: 20px;
+        z-index: 2;
+    }
+
+    .menu-items {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.95);
+        flex-direction: column;
+        justify-content: center;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        padding: 0;
+    }
+
+    .menu-items li {
+        margin: 1.5rem 0;
+        font-size: 1.2rem;
+    }
+
+    /* Hamburger Animation */
+    .checkbox:checked ~ .menu-items {
+        transform: translateX(0);
+    }
+
+    .checkbox:checked ~ .hamburger-lines .line1 {
+        transform: rotate(45deg);
+        top: 10px;
+    }
+
+    .checkbox:checked ~ .hamburger-lines .line2 {
+        transform: scaleX(0);
+    }
+
+    .checkbox:checked ~ .hamburger-lines .line3 {
+        transform: rotate(-45deg);
+        top: 10px;
+    }
+}

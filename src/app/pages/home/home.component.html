@@ -1,0 +1,143 @@
+<!-- Hero Section (Carrusel) -->
+<section id="hero" class="hero">
+  <div class="carousel" [style.transform]="'translateX(-' + currentIndex * 100 + '%)'">
+    <div
+      class="slide"
+      *ngFor="let slide of slides"
+      [style.backgroundImage]="'url(' + slide.image + ')'">
+      <div class="slide-content">
+        <h1 [innerHTML]="slide.title"></h1>
+        <a [routerLink]="slide.link" class="cta-button">{{ slide.button }}</a>
+      </div>
+    </div>
+  </div>
+  <div class="carousel-controls">
+    <span class="prev" (click)="prevSlide()"></span>
+    <span class="next" (click)="nextSlide()"></span>
+  </div>
+</section>
+
+<!-- Clinic Info Section -->
+<section class="clinic-info">
+  <div class="info-header">
+    <img src="/assets/images/perrito-acostado.png" alt="Pet Icon" class="pet-icon" />
+    <h2>Clínica veterinaria 24 horas</h2>
+  </div>
+  <p class="info-text">
+    Ofrecemos un amplio abanico de servicios especializados y atención de alta calidad, garantizando la salud y bienestar de tus queridos compañeros peludos.
+  </p>
+  <div class="services-grid">
+    <div class="service-card">
+      <h3>Equipo experto</h3>
+      <p>Nuestro equipo de expertos en cuidado animal está comprometido con la salud y bienestar de tu mascota.</p>
+      <a routerLink="/specialties" class="service-button">Nuestras especialidades</a>
+    </div>
+    <div class="service-card">
+      <h3>Especialidades</h3>
+      <ul>
+        <li>Medicina General</li>
+        <li>Odontología Veterinaria</li>
+        <li>Cirugía</li>
+        <li>Diagnóstico por Imagen</li>
+        <li>Vacunación y Prevención</li>
+        <li>Nutrición y Dietética</li>
+      </ul>
+      <a routerLink="/specialties" class="service-button">Nuestras especialidades</a>
+    </div>
+    <div class="service-card">
+      <h3>Tecnología</h3>
+      <p>Contamos con equipos médicos avanzados para diagnósticos precisos y tratamientos efectivos, garantizando el bienestar de tus mascotas.</p>
+      <a routerLink="/specialties" class="service-button">Nuestras especialidades</a>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="testimonials">
+  <h2>TESTIMONIOS</h2>
+  <div class="testimonial-header">
+    <h1 id="testimonial-title">En Dooki, hemos salvado y <br> ayudado a más de <span class="highlight">3000</span> mascotas</h1>
+  </div>
+
+  <div class="testimonials-container">
+    <!-- Testimonio dinámico -->
+    <div class="testimonial-card">
+      <h1>{{ testimonialTitle }}</h1>
+      <h3>{{ testimonialText }}</h3>
+    </div>
+
+    <!-- Lista de clientes -->
+    <div class="testimonial-clients">
+      <div
+        class="client"
+        *ngFor="let client of clientList"
+        (click)="selectClient(client.name)"
+        [ngStyle]="{ 'background-color': selectedClient === client.name ? '#95E6E9' : 'rgba(149, 230, 233, 0.20)' }"
+      >
+        <img [src]="client.image" alt="Client" class="client-img" />
+        <span class="client-span">{{ client.name }}</span>
+      </div>
+    </div>
+  </div>
+
+  <a class="cta-button" href="tel:123456789">llama a un veterinario</a>
+</section>
+
+<!-- Services Icons Section -->
+<section id="service-icons" class="service-icons">
+  <h2>Para la felicidad tuya y de tus mascotas</h2>
+  <div class="icons-grid">
+    <div class="icon-card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="/assets/images/img-shopping-bag-Servicios.png" alt="Servicios" />
+          <span>Servicios</span>
+        </div>
+        <div class="card-back">
+          <p>Descubre nuestros amplios servicios para cuidar a tus mascotas.</p>
+          <a routerLink="/services" class="card-btn">Ver más</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="icon-card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="/assets/images/imgEspecialidades.png" alt="Especialidades" />
+          <span>Especialidades</span>
+        </div>
+        <div class="card-back">
+          <p>Conoce nuestras especialidades en salud animal.</p>
+          <a routerLink="/specialties" class="card-btn">Ver más</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="icon-card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="/assets/images/img-exotic-pet.png" alt="Animales Exóticos" />
+          <span>Animales Exóticos</span>
+        </div>
+        <div class="card-back">
+          <p>Atendemos también a animales exóticos.</p>
+          <a routerLink="/exotic" class="card-btn">Ver más</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="icon-card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="/assets/images/pet-house-Nosotros.png" alt="Nosotros" />
+          <span>Nosotros</span>
+        </div>
+        <div class="card-back">
+          <p>Conoce nuestro equipo y nuestra historia.</p>
+          <a routerLink="/whoweare" class="card-btn">Ver más</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a routerLink="/login" class="cta-button">Reserva con nosotros</a>
+</section>

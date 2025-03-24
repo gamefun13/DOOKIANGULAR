@@ -1,0 +1,109 @@
+
+  <!-- Sección Quiénes Somos -->
+  <section class="about-container">
+    <h1>¿Quiénes somos?</h1>
+    <div class="about-content">
+      <img src="assets/images/CockerCabezaLogo.png" alt="Dooki Veterinaria" class="about-logo" />
+      <div class="about-text">
+        <h2>Veterinaria Dooki</h2>
+        <p>
+          Somos una veterinaria que nos apasiona el cuidado de los animales. Nos especializamos en ayudar a las mascotas de las personas y brindarles el servicio que merecen.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Sección de Estadísticas -->
+  <section class="stats-container">
+    <h2>Nuestras Estadísticas</h2>
+    <div class="stats-grid">
+      <div class="stat-box">
+        <h3>Vidas salvadas</h3>
+        <p class="stat-number" data-target="12176">0</p>
+        <p class="stat-note">Top 1 Colombia</p>
+      </div>
+      <div class="stat-box">
+        <h3>Citas realizadas</h3>
+        <p class="stat-number" data-target="10438">0</p>
+        <p class="stat-percentage" data-target="25">⬆ 0%</p>
+      </div>
+      <div class="stat-box">
+        <h3>Operaciones exitosas</h3>
+        <p class="stat-number" data-target="3050">0</p>
+        <p class="stat-note">¡Todas exitosas!</p>
+      </div>
+      <div class="stat-box">
+        <h3>Nuevos clientes</h3>
+        <p class="stat-number" data-target="2000">0</p>
+        <p class="stat-percentage" data-target="15">⬆ 0%</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Nuestra Gente -->
+  <section class="section-cards">
+    <h1>Nuestra Gente</h1>
+    <div class="container">
+      <div class="description">
+        <h2>Conoce a nuestros médicos</h2>
+        <p>Contamos con un equipo de profesionales altamente calificados y comprometidos con la salud y bienestar de nuestros pacientes. Con años de experiencia, cada uno de ellos aporta conocimientos especializados en diversas áreas de la medicina.</p>
+      </div>
+  
+      <div class="cards-container">
+        <div class="card" *ngFor="let doctor of doctors">
+          <h3 class="title">{{ doctor.nombre }}</h3>
+          <p class="specialty">Especialidad: {{ doctor.especialidad }}</p>
+          <p class="experience">Experiencia: {{ doctor.experiencia }}</p>
+          <p class="success">Éxito: {{ doctor.exito }}%</p>
+      
+          <div class="bar">
+            <div class="filledbar" [style.width.%]="doctor.exito"></div>
+          </div>
+      
+          <div class="circle">
+            <img [src]="doctor.imagen" alt="Foto del doctor" />
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  
+  
+  <!-- Sección de Misión y Visión -->
+  <section class="mission-vision-container">
+    <div class="mission-box">
+      <h3>Misión</h3>
+      <p>
+        Ser la veterinaria de confianza que garantiza el bienestar y la salud de cada mascota, brindando atención de calidad con amor y compromiso.
+      </p>
+    </div>
+    <div class="vision-box">
+      <h3>Visión</h3>
+      <p>
+        Cuidar y proteger la salud de las mascotas a través de un servicio veterinario integral, profesional y cercano, asegurando su felicidad y la tranquilidad de sus dueños.
+      </p>
+    </div>
+  </section>
+  
+  <!-- Sección de Íconos -->
+  <section id="service-icons" class="service-icons">
+    <h2>Para la felicidad tuya y de tus mascotas</h2>
+    <div class="icons-grid">
+      <div class="icon-card" *ngFor="let card of iconCards">
+        <div class="card-inner">
+          <div class="card-front">
+            <img [src]="card.img" [alt]="card.titulo" />
+            <span>{{ card.titulo }}</span>
+          </div>
+          <div class="card-back">
+            <p>{{ card.texto }}</p>
+
+            <a [routerLink]="card.link" class="card-btn">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a routerLink="/login" class="cta-button">Reserva con nosotros</a>
+  </section>
+  
